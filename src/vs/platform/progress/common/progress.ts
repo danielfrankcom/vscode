@@ -73,11 +73,13 @@ export interface IProgressOptions {
 	location: ProgressLocation;
 	title?: string;
 	tooltip?: string;
+	source?: string;
+	total?: number;
 }
 
 export interface IProgressStep {
 	message?: string;
-	percentage?: number;
+	worked?: number;
 }
 
 export const IProgressService2 = createDecorator<IProgressService2>('progressService2');
